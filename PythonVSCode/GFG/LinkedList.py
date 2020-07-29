@@ -15,6 +15,7 @@ class LinkedList:
         self.head = None
         self.tail = None
         self.size = 0
+        self.helper = None
 
     def addNodeFirst(self, data: int):
         temp = Node(data)
@@ -138,6 +139,29 @@ class LinkedList:
         
         print()
 
+    def fold(self):
+        self.helper = self.head
+        
+        self.foldh(self.head, 0)
+
+    def foldh(self, head: Node, idx: int):
+        if head == None:
+            return
+        
+        self.foldh(head.next, idx+1)
+
+        if idx > self.size//2:
+            store = self.helper.next
+            self.helper.next = head
+            head.next = store
+            self.helper = store
+
+        elif idx == self.size//2:
+            head.next = None
+            self.tail = head
+
+
+
 
 def main():
     arr = list(map(int, stdin.readline().split()))
@@ -153,6 +177,8 @@ def main():
     # LL.printLL()
     # print('Size: ', LL.getSize())
     # LL.removeNodeAt(3)
+    # LL.printLL()
+    LL.fold()
     LL.printLL()
 
 
