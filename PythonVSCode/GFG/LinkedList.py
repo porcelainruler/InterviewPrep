@@ -160,7 +160,19 @@ class LinkedList:
             head.next = None
             self.tail = head
 
+    def midNode(self) -> Node:
+        temp1 = self.head
+        temp2 = self.head
 
+        while temp2.next != None:
+            if temp2.next.next != None:
+                temp1 = temp1.next
+                temp2 = temp2.next.next
+
+        return temp1
+
+    def kReversal(self, k: int):
+        None
 
 
 def main():
@@ -178,8 +190,10 @@ def main():
     # print('Size: ', LL.getSize())
     # LL.removeNodeAt(3)
     # LL.printLL()
-    LL.fold()
-    LL.printLL()
+    # LL.fold()
+    # LL.printLL()
+    print(LL.midNode().data)
+
 
 
 
