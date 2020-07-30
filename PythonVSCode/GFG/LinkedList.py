@@ -171,8 +171,44 @@ class LinkedList:
 
         return temp1
 
-    def kReversal(self, k: int):
-        None
+    def kReversal(self, head: Node, k: int, flag: bool = True):
+        prev = None
+        curr = head
+        succ = None
+
+        count = 0
+        while curr is not None and count < k:
+            succ = curr.next 
+            curr.next = prev
+            prev = curr
+            curr = succ
+
+            count += 1
+        
+        if flag:
+            self.head = prev
+
+        if succ != None:
+            head.next = self.kReversal(succ, k, False)
+
+        return prev
+
+    def evenOddDiv(self):
+        temp1 = self.head
+        temp2 = self.head
+        
+        while temp1 is not None and temp2 is not None:
+            if temp1.data%2 == 1:
+                temp2 = temp1.next 
+                while temp2 is not None:
+                    if temp2.data%2 == 0:
+                        temp = temp1.data
+                        temp1.data = temp2.data 
+                        temp2.data = temp
+                        break
+                    temp2 = temp2.next
+            temp1 = temp1.next 
+        return 1
 
 
 def main():
@@ -192,7 +228,11 @@ def main():
     # LL.printLL()
     # LL.fold()
     # LL.printLL()
-    print(LL.midNode().data)
+    # print(LL.midNode().data)
+    # LL.kReversal(LL.head, 3)
+    # LL.printLL()
+    LL.evenOddDiv()
+    LL.printLL()
 
 
 
