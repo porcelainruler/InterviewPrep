@@ -160,6 +160,23 @@ class LinkedList:
             head.next = None
             self.tail = head
 
+    def findMid(self):
+        # Code here
+        # return the value stored in the middle node
+        temp1 = self.head
+        temp2 = self.head
+    
+        if not head:
+            return -1
+
+        while temp2.next and temp1.next and temp2.next.next:
+            temp1 = temp1.next
+            temp2 = temp2.next.next
+    
+        if temp2.next:
+            temp1 = temp1.next
+        return temp1.data
+
     def midNode(self) -> Node:
         temp1 = self.head
         temp2 = self.head
