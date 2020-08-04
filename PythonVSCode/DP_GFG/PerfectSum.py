@@ -1,5 +1,6 @@
 from sys import stdin
 
+
 def dp(arr: list, k: int, n: int):
     dp = [[0]*(k+1) for i in range(n+1)]
 
