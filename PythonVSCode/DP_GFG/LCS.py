@@ -27,5 +27,11 @@ def main():
         ans = dp(sarr1, sarr2, len(sarr1), len(sarr2))
         print(ans)
 
+# 1
+# 9 9
+# bbabcbcab
+# bacbcbabb
+
 if __name__ == '__main__':
     main()
+

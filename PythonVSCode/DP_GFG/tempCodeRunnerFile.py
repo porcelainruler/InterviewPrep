@@ -1,7 +1,4 @@
-2
-12
-i like sam sung samsung mobile ice cream icecream man go mango
-ilike
-12
-i like sam sung samsung mobile ice cream icecream man go mango
-idontlike
+1
+9 9
+bbabcbcab
+bacbcbabb
