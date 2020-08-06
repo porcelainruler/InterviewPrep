@@ -1,4 +1,3 @@
 1
-9 9
-bbabcbcab
-bacbcbabb
+5
+abaab
