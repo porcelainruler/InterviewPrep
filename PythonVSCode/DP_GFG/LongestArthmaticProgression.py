@@ -18,6 +18,7 @@ def dp(arr: list, n: int):
             if arr[i] + arr[k] < 2*arr[j]:
                 k += 1
             elif arr[i] + arr[k] > 2*arr[j]:
+                dp[i][j] = 2
                 i -= 1
             else:
                 dp[i][j] = 1 + dp[j][k]
@@ -25,9 +26,9 @@ def dp(arr: list, n: int):
                 i -= 1
                 k += 1
 
-                while i >= 0:
-                    dp[i][j] = 2
-                    i -= 1
+        while i >= 0:
+            dp[i][j] = 2
+            i -= 1
 
     return maxEle
 
