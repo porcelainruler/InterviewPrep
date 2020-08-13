@@ -61,5 +61,5 @@ def maxsubarrayproduct(arr):
   
 # Driver function to test above function 
 arr = [1, -2, -3, 0, 7, -8, -2] 
-print "Maximum product subarray is", maxsubarrayproduct(arr) 
+print("Maximum product subarray is", maxsubarrayproduct(arr))
   
