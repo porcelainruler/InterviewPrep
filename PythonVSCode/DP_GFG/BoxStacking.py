@@ -44,6 +44,10 @@ def main():
             boxes.append(box2)
             boxes.append(box3)
         
+        # temp = sorted(boxes, key=lambda x: x.area)
+        # for b in temp:
+        #     b.printer()
+
         boxes = sorted(boxes, key=attrgetter('area'), reverse=True)
         print(len(boxes))
         ans = dp(boxes, n)
