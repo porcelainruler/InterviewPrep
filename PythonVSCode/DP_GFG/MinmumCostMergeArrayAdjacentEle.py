@@ -1,3 +1,5 @@
+# dp[i][j] = min(dp[i][j], (sum[i][j] + dp[i][k] + dp[k + 1][j])), for every (i ? k lt; j) 
+
 '''
 
 // Java program for the above approach

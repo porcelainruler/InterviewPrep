@@ -12,5 +12,9 @@ def main():
         arr = list(map(int, stdin.readline().split()))
         sarr = stdin.readline()
 
+# i = 8
+# change = i << 1
+# print(change)
+
 if __name__ == '__main__':
     main()
